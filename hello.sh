@@ -1,21 +1,11 @@
 #! /bin/bash
 
-# Use echo command to display text or value of variable.
+# another way to pass argument
 
-# echo [options] [string, variables...]
-# Displays text or variables value on screen.
-# Options
-# -n Do not output the trailing new line.
-# -e Enable interpretation of the following backslash escaped characters in the strings:
-# \a alert (bell)
-# \b backspace
-# \c suppress trailing new line
-# \n new line
-# \r carriage return
-# \t horizontal tab
-# \\ backslash
+args=("$@")
 
-echo -e "An apple a day keeps away \a\t\tdoctor\n"
+echo ${args[0]}, ${args[1]}, ${args[2]},${args[3]}
 
+echo $@
 
-echo $0 $1 $2 $3 '> $1 $2 $3'
+echo $# # print no. of argument passed
