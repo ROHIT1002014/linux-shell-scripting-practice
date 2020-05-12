@@ -1,7 +1,21 @@
-#! /bin/bash    # The sign #! is called she-bang and is written at top of the script. It passes instruction to program /bin/sh.
+#! /bin/bash
+
+# Use echo command to display text or value of variable.
+
+# echo [options] [string, variables...]
+# Displays text or variables value on screen.
+# Options
+# -n Do not output the trailing new line.
+# -e Enable interpretation of the following backslash escaped characters in the strings:
+# \a alert (bell)
+# \b backspace
+# \c suppress trailing new line
+# \n new line
+# \r carriage return
+# \t horizontal tab
+# \\ backslash
+
+echo -e "An apple a day keeps away \a\t\tdoctor\n"
 
 
-# to run script  " ./filename.sh"  if it show permission error then use chmod +x filename
-
-
-echo "hello world"
+echo $0 $1 $2 $3 '> $1 $2 $3'
