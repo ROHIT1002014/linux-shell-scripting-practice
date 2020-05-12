@@ -44,4 +44,10 @@ To list all the signal names with their corresponding number use following comma
 kill -l
 killall cammand can be used to kill processes by their name.
 
+TO CHANGE PERMISSION
+chmod
 
+add executable permision
+chmod +x filename
+remove write permission
+chmod -w filename
