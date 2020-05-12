@@ -1,0 +1,47 @@
+The kill command enables us to kill a process without logging out or restarting the computer.
+Each process (also called task sometimes) on Linux  have its own unique process identification number (PID).
+The PID is assigned to the process as soon as it is created.
+
+kill [options or signals] [...]
+
+The kill command in its simplest for can be as follows:
+
+kill 1565
+Where 1565 in the above command is the PID of the process.
+
+To print all the processes and their corresponding PID, run the following command:
+ps -A
+
+If you know the process name you can get its PID using the grep on ps command.
+
+For example you want to know the PID of process whose name is psql the following command will give you the PID of the psql.
+
+Shell
+$ ps aux | grep psql
+
+Use pidof command to find the PID of process
+pidof psql
+
+The following command can be use to kill process based upon PID
+
+kill -9 1656
+
+or
+
+kill -SIGTERM 1656
+
+where pid=1656.
+-9 flag in the above command is SIGKILL.
+The default signal for kill is SIGTERM.
+
+To kill more then one processes use the following commandwhere pid=1656.
+-9 flag in the above command is SIGKILL.
+The default signal for kill is SIGTERM.
+
+To kill more then one processes use the following command
+To list all the signal names with their corresponding number use following command
+
+kill -l
+killall cammand can be used to kill processes by their name.
+
+
