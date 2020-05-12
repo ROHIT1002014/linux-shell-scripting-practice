@@ -1,17 +1,25 @@
-rules for write variables
+# read input from terminal
+echo "enter your name "
 
-To define UDV use following syntax
-Syntax:
-variable name=value
+read name  # take input from tarminal
 
-'value' is assigned to given 'variable name' and Value must be on right side = sign.
+echo $name
 
-Example:
-no=10# this is ok
-10=no# Error, NOT Ok, Value must be on right side of = sign.
-To define variable called 'vech' having value Bus
-vech=Bus
-To define variable called n having value 10
-n=10
+# take multiple input from terminal
 
-variable name should not start with number
+read name1 name2 name3
+
+echo "your name is : $name1 , $name2 ,  $name3"
+
+read -p 'Enter user name : ' user_var  # by this user will be able to enter data in oneline
+echo $user_var
+
+read -sp 'Enter user name : ' user  # by this user will be able to password
+echo $user
+
+read -a names  # take nams as array
+echo 'name :' ${names[0]}, ${names[1]}, ${names[2]}
+
+read
+
+echo $REPLY  # it will print read msg
