@@ -20,7 +20,7 @@
 #       fi
 
 # Put spaces after [ and before ], and around the operators and operands.
-# Number Comparisons:
+# NUMBER COMPARISONS:
 
 # -eq - is equal to - if [ "$a" -eq "$b" ]
 
@@ -51,4 +51,28 @@ if [ $num -lt 10 ]
   echo 'number is less then 10'
 else
   echo 'number is greater then 10'
+fi
+
+# STRING COMPARISON
+# = - is equal to - if [ "$a" = "$b" ]
+
+# == - is equal to - if [ "$a" == "$b" ]
+
+# != - is not equal to - if [ "$a" != "$b" ]
+
+# < - is less than, in ASCII alphabetical order - if [[ "$a" < "$b" ]]
+
+# > - is greater than, in ASCII alphabetical order - if [[ "$a" > "$b" ]]
+
+
+# -z - string is null, that is, has zero length
+
+echo 'enter string'
+read str
+
+if [ "$str" = "rohit" ]
+  then
+  echo 'string are equal'
+else
+  echo 'string are not equal'
 fi
