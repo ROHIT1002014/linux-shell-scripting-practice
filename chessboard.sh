@@ -6,10 +6,13 @@ do
     tmp=`expr $tot % 2`
     if [ $tmp -eq 0 ]; then
     echo -e -n "\033[47m "
+    sleep .15 # it will sleep for .15 second
     else
         echo -e -n "\033[40m "
+        sleep .15
     fi
   done
   echo -e -n "\033[40m"
   echo ""
+  sleep .15
 done
