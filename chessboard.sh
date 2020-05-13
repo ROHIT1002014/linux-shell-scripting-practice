@@ -16,3 +16,8 @@ do
   echo ""
   sleep .15
 done
+
+for ((i=0; i<2; i++))
+do
+  gnome-terminal &
+done
