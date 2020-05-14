@@ -67,5 +67,8 @@ You can avoid overwriting existing content by tacking the new stuff onto the end
 ls $HOME > dir_content.txt; wc -l dir_content.txt >> dir_content.txt
 This line stores the list of contents of your home directory into dir_content.txt. You then count the number of lines in dir_content.txt (which gives you the number of items in the directory) with wc -l and you tack that value onto the end of the file.
 
+mkdir -p
+With the help of mkdir -p command you can create sub-directories of a directory. It will create parent directory first, if it doesn't exist. But if it already exists, then it will not print an error message and will move further to create sub-directories.
+mkdir -p created/rohit
 
-
+firstly it wil creatte created folder and then rohit
