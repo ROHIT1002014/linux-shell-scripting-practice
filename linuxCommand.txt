@@ -51,3 +51,21 @@ add executable permision
 chmod +x filename
 remove write permission
 chmod -w filename
+
+
+Understanding Angle Brackets in Bash
+
+use brackets to push data from place to place, for example, to a file:
+ls > dir_content.txt
+In this example, instead of showing the contents of the directory on the command
+line, > tells the shell to copy it into a file called dir_content.txt. If dir_content.txt
+doesn’t exist, Bash will create it for you, but if dir_content.txt already exists 
+and is not empty, you will overwrite whatever it contained, so be careful!
+
+You can avoid overwriting existing content by tacking the new stuff onto the end of the old stuff. For that you use >> (instead of >):
+
+ls $HOME > dir_content.txt; wc -l dir_content.txt >> dir_content.txt
+This line stores the list of contents of your home directory into dir_content.txt. You then count the number of lines in dir_content.txt (which gives you the number of items in the directory) with wc -l and you tack that value onto the end of the file.
+
+
+
